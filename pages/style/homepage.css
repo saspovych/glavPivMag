@@ -1,0 +1,176 @@
+* {
+	margin:  0px;
+	padding:  0px;
+	box-sizing: border-box;
+	font-family: 'Roboto';
+}
+a {
+	text-decoration: none;
+	color: #171717;
+}
+li {
+	list-style-type: none;
+}
+header {
+	height: 256px;
+	background-color: #FCCE4D;
+}
+.logo {
+	float:  left;
+	padding:  27px 32px;
+}
+.right_side {
+	width:  75vw;
+	float:  right;
+	margin:  42px 32px 17px 0px;
+}
+.right_side .city,
+.right_side .number,
+.right_side nav a {
+	font-size: 20px;
+}
+.right_side .order {
+	font-size: 16px;
+}
+.right_side .searchBox,
+.right_side .support_button{
+	font-size: 18px;
+}
+.top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 40px;
+}
+.top .location {
+	display: flex;
+    height: 25px;
+}
+.top .location .city {
+	margin-left: 10px;
+	border-bottom: 1px dashed #000000;
+}
+.top .search_box {
+	display: flex;
+}
+.top .searchBox {
+	width:  30vw;
+	border-radius:  100px 0px 0px 100px;
+	padding-left:  20px;
+	border: none;
+}
+.top .searchBox:focus  {
+	outline: none;
+}
+.top .search_box .wrap_loupe {
+	border-radius:  0px 100px 100px 0px;
+	width:  45px;
+}
+.top .search_box img {
+	margin: 21px 10px;
+}
+.top .search_box .wrap_loupe,
+.top .searchBox {
+	background: #FFFFFF80;
+	height:  60px;
+}
+.top .order {
+	background: #FFFFFF80;
+	border-radius:  100px;
+	padding:  15px 20px;
+	margin-left: 20px;
+	transition: all 0.7s;
+}
+.bottom {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.bottom ul {
+	display: flex;
+}
+.bottom li:not(:last-child) {
+	margin-right: 32px;
+}
+.bottom .support_button li {
+	width:  80px;
+	text-align: center;
+}
+.bottom .support_button a {
+	display: inline-block;
+	width:  70px;
+	height:  70px;
+	border-radius:  50%;
+	background-color: #FFFFFF80;
+	padding: 20%;
+	margin-bottom:  11px;
+	transition: all 0.7s;
+}
+.bottom .support_button img {
+	margin-top:  2px;
+}
+.bottom .support_button .last {
+	margin: 6px 2px 0 0;
+}
+.bottom .support_button .number {
+	width:  20px;
+	line-height: 20px;
+	background-color: #F2B918;
+	font-size: 12px;
+	border-radius: 100px;
+	position: relative;
+	left:  25px;
+	bottom:  45px;
+
+}
+.bottom .support_button a:hover,
+.top .order:hover {
+	transition: all 0.7s;
+	box-shadow: 0px 0px 10px 2px #8D8D8D;
+	background-color: #FFFFFF;
+}
+/*********************************Шапка*********************************/
+.clearfix {
+	clear: both;
+}
+main {
+	background-color: #171717;
+	height:  1200px;
+}
+/**********************************Подвал**********************************/
+footer {
+	background: url(../../img/bg_footer.png)  no-repeat;
+	font-size:  16px;
+}
+footer a,
+footer span {
+	color:  #FFFFFF;
+}
+footer .wrapper {
+	display: flex;
+	width:  100%;
+	height:  288px;
+}
+.wrapper .right_side {
+	margin:  100px 150px 60px 50px;
+}
+.wrapper .left_side {
+	margin: 100px 50px 66px 100px;
+}
+.wrapper .logo {
+	margin-top: 30px;
+	text-align: center;
+	font-size:  12px;
+	font-weight: 300;
+}
+.wrapper .logo img {
+	margin-bottom: 20px;
+}
+.wrapper table {
+	table-layout: auto;
+	width:  350px;
+	border-spacing:  0px 20px;
+}
+.wrapper td {
+
+}
