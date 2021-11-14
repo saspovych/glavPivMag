@@ -147,9 +147,21 @@ header .right-side_bottom .right-side_navigation ul li {
 }
 header .right-side_bottom .right-side_navigation ul li a {
   color: #171717;
+  position: relative;
 }
-header .right-side_bottom .right-side_navigation ul li a:hover {
-  text-decoration: underline;
+header .right-side_bottom .right-side_navigation ul li a::after {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #171717;
+  content: "";
+  -webkit-transition: width 0.5s ease-out;
+  transition: width 0.5s ease-out;
+}
+header .right-side_bottom .right-side_navigation ul li a:hover::after, header .right-side_bottom .right-side_navigation ul li a:hover:focus {
+  width: 100%;
 }
 header .right-side_bottom .right-side_navigation ul li:first-child {
   margin-right: 46px;

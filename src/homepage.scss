@@ -125,8 +125,24 @@ header {
 				& a {
 					color: #171717;
 
+					position: relative;
+
+					&::after {
+						display: block;
+						position: absolute;
+						left: 0;
+						width: 0;
+						height: 2px;
+						background-color: #171717;
+						content: "";
+						transition: width 0.5s ease-out;
+					}
+
 					&:hover {
-						text-decoration: underline;
+						&::after,
+						&:focus {
+							width: 100%;
+						}
 					}
 				}
 
