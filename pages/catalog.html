@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Brew Co - лучшее крафтовое пиво в России</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+		<link href="../src/nouislider.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="style/catalog.css">
+	</head>
+	<body>
+		<header class="main-header">
+			<div class="wrapper">
+				<div class="left-side">
+					<a href="homepage.html">
+						<img class="left-side_logo" src="../img/logo.png" alt="Brew Co">
+					</a>
+				</div>
+				<div class="right-side">
+					<div class="right-side_top">
+						<div class="right-side_location">
+							<span class="right-side_city">Москва</span>
+						</div>
+						<div class="right-side_searcher">
+							<form>
+								<input type="search" placeholder="Я ищу...">
+								<img class="right-side_loupe" src="../img/Лупа.png" alt="Лупа">
+							</form>
+						</div>
+						<div class="right-side_order">
+							<span class="right-side_phone-number">+7 495 975-78-77 </span>
+							<a class="right-side_call" href="#">Заказать звонок</a>
+						</div>
+					</div>
+					<div class="right-side_bottom">
+						<nav class="right-side_navigation">
+							<ul>
+								<li><a class="right-side_active" href="#">Каталог пива</a></li>
+								<li><a href="#">Бар</a></li>
+								<li><a href="#">Скидки</a></li>
+								<li><a href="#">Экскурсии</a></li>
+								<li><a href="news.html">Новости</a></li>
+							</ul>
+						</nav>
+						<div class="right-side_account-buttons">
+							<div class="right-side_button">
+								<a href="#">
+									<img src="../img/box.png" alt="Заказы" width="31px" height="34px">
+								</a>
+								<span class="right-side_button-name">Заказы</span>
+							</div>
+							<div class="right-side_button">
+								<a href="authorization.html">
+									<img src="../img/autoriz.png" alt="Авторизация" width="26px" height="28px">
+								</a>
+								<span class="right-side_button-name">Авторизация</span>
+							</div>
+							<div class="right-side_button">
+								<a href="basket.html">
+									<img src="../img/basket.png" alt="Корзина" width="33px" height="28px">
+								</a>
+								<span class="right-side_button-name">Корзина</span>
+								<div class="right-side_in-basket">2</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="major-main">
+			<aside>
+				<div class="wrapper">
+					<section class="catalog_price">
+						<h2>Цена</h2>
+						<div class="catalog_hidden-block catalog_unactive-block">
+							<div class="filter-price_slider" id="filter-slider"></div>
+							<div class="filter-price_inputs">
+								<input class="filter-price__input" id="input0" type="number" min="0" max="10000" placeholder="0">
+								<span>-</span>
+								<input class="filter-price__input" id="input1" type="number" min="0" max="10000" placeholder="2000">
+								<span>руб.</span>
+							</div>
+						</div>
+					</section>
+					<section class="catalog_contry">
+						<h2>Страна</h2>
+						<div class="catalog_hidden-block catalog_unactive-block">¯\_(ツ)_/¯ </div>
+					</section>
+					<section class="catalog_volume">
+						<h2>Объем</h2>
+						<div class="catalog_hidden-block catalog_unactive-block">
+							<div class="catalog_hidden-block_content">
+								<label>
+									<input type="checkbox">
+									<span>0,33 л</span>
+								</label>
+								<label>
+									<input type="checkbox">
+									<span>0,355 л</span>
+								</label>
+								<label>
+									<input type="checkbox">
+									<span>0,4 л</span>
+								</label>
+								<label>
+									<input type="checkbox">
+									<span>0,5 л</span>
+								</label>
+
+								<a href="" class="catalog_show-all">Показать все</a>
+							</div>
+						</div>
+					</section>
+					<section class="catalog_beer-strength">
+						<h2>Крепость</h2>
+						<div class="catalog_hidden-block catalog_unactive-block">¯\_(ツ)_/¯ </div>
+					</section>
+					<section class="catalog_brand">
+						<h2>Бренд</h2>
+						<div class="catalog_hidden-block catalog_unactive-block">¯\_(ツ)_/¯ </div>
+					</section>
+
+					<div class="catalog_apply-and-clear">
+						<a class="catalog_apply" href="">Применить</a>
+						<a class="catalog_clear" href="">Очистить</a>
+					</div>
+				</div>
+			</aside>
+			<article>
+				<header class="catalog_header">
+					<div class="catalog_number-of-products">248 товаров</div>
+					<div class="catalog_sort-box">
+						<span class="catalog_sort-box_title">Сортировка</span>
+						<div class="catalog_select">
+							<select>
+								<option value="По популятрности">По популярности</option>
+								<option value="По стоимости">По стоимости</option>
+								<option value="По количеству">По количеству</option>
+							</select>
+						</div>
+					</div>
+				</header>
+				<main class="catalog_main">
+					<div class="card">
+						<div class="card__inner">
+							<div class="card__face card__face--front">
+								<div class="top">
+									<div class="artic">326856365</div>
+									<div class="country">
+										<img src="../img/scotland.png" alt="Рашка">
+									</div>
+								</div>
+								<img src="../img/have-time_beer1.png" alt="" width="200px" height="380px">
+								<div class="name_and_price">
+									<div class="name">
+										<span class="first">Jaws Blewery</span>
+										<span class="second">Chomolungma</span>
+									</div>
+									<div class="price">
+										<span class="discount-price">195 ₽</span>
+									</div>
+								</div>
+								<div class="info">
+									<ul>
+										<li>0,33 л</li>
+										<li>5 ABV</li>
+										<li>38 IBU</li>
+										<li>12,5%</li>
+									</ul>
+								</div>
+							</div>
+							<div class="card__face card__face--back">
+								<div class="card__content">
+									<div class="back_top">
+										<div class="back_artic">Артикул: 843756828</div>
+										<div class="back_country">
+											<span>Шотландия</span>
+											<img src="../img/scotland.png" alt="">
+										</div>
+									</div>
+									<div class="back_content">
+										<div class="left_side">
+											<img src="../img/have-time_beer1.png" alt=""  width="200px" height="380px">
+											<span>Old Engine Oil</span>
+											<div class="price">280 ₽</div>
+										</div>
+										<div class="right_side">
+											<span class="back-first">Harviestoun</span>
+											<div class="back_info">
+												<ul>
+													<li>0,33 л</li>
+													<li>16 ABV</li>
+													<li>35 IBU</li>
+													<li>12,5%</li>
+												</ul>
+											</div>
+											<div class="counter">
+												<div class="minus">-</div>
+												<div class="number">2</div>
+												<div class="plus">+</div>
+											</div>
+											<a href="#" class="add-in-backet">В корзине (2)</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card__inner">
+							<div class="card__face card__face--front">
+								<div class="top">
+									<div class="artic">326856365</div>
+									<div class="country">
+										<img src="../img/scotland.png" alt="Рашка">
+									</div>
+								</div>
+								<img src="../img/have-time_beer1.png" alt="" width="200px" height="380px">
+								<div class="name_and_price">
+									<div class="name">
+										<span class="first">Jaws Blewery</span>
+										<span class="second">Chomolungma</span>
+									</div>
+									<div class="price">
+										<span class="discount-price">195 ₽</span>
+									</div>
+								</div>
+								<div class="info">
+									<ul>
+										<li>0,33 л</li>
+										<li>5 ABV</li>
+										<li>38 IBU</li>
+										<li>12,5%</li>
+									</ul>
+								</div>
+							</div>
+							<div class="card__face card__face--back">
+								<div class="card__content">
+									<div class="back_top">
+										<div class="back_artic">Артикул: 843756828</div>
+										<div class="back_country">
+											<span>Шотландия</span>
+											<img src="../img/scotland.png" alt="">
+										</div>
+									</div>
+									<div class="back_content">
+										<div class="left_side">
+											<img src="../img/have-time_beer1.png" alt=""  width="200px" height="380px">
+											<span>Old Engine Oil</span>
+											<div class="price">280 ₽</div>
+										</div>
+										<div class="right_side">
+											<span class="back-first">Harviestoun</span>
+											<div class="back_info">
+												<ul>
+													<li>0,33 л</li>
+													<li>16 ABV</li>
+													<li>35 IBU</li>
+													<li>12,5%</li>
+												</ul>
+											</div>
+											<div class="counter">
+												<div class="minus">-</div>
+												<div class="number">2</div>
+												<div class="plus">+</div>
+											</div>
+											<a href="#" class="add-in-backet">В корзине (2)</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card__inner">
+							<div class="card__face card__face--front">
+								<div class="top">
+									<div class="artic">326856365</div>
+									<div class="country">
+										<img src="../img/scotland.png" alt="Рашка">
+									</div>
+								</div>
+								<img src="../img/have-time_beer1.png" alt="" width="200px" height="380px">
+								<div class="name_and_price">
+									<div class="name">
+										<span class="first">Jaws Blewery</span>
+										<span class="second">Chomolungma</span>
+									</div>
+									<div class="price">
+										<span class="discount-price">195 ₽</span>
+									</div>
+								</div>
+								<div class="info">
+									<ul>
+										<li>0,33 л</li>
+										<li>5 ABV</li>
+										<li>38 IBU</li>
+										<li>12,5%</li>
+									</ul>
+								</div>
+							</div>
+							<div class="card__face card__face--back">
+								<div class="card__content">
+									<div class="back_top">
+										<div class="back_artic">Артикул: 843756828</div>
+										<div class="back_country">
+											<span>Шотландия</span>
+											<img src="../img/scotland.png" alt="">
+										</div>
+									</div>
+									<div class="back_content">
+										<div class="left_side">
+											<img src="../img/have-time_beer1.png" alt=""  width="200px" height="380px">
+											<span>Old Engine Oil</span>
+											<div class="price">280 ₽</div>
+										</div>
+										<div class="right_side">
+											<span class="back-first">Harviestoun</span>
+											<div class="back_info">
+												<ul>
+													<li>0,33 л</li>
+													<li>16 ABV</li>
+													<li>35 IBU</li>
+													<li>12,5%</li>
+												</ul>
+											</div>
+											<div class="counter">
+												<div class="minus">-</div>
+												<div class="number">2</div>
+												<div class="plus">+</div>
+											</div>
+											<a href="#" class="add-in-backet">В корзине (2)</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card__inner">
+							<div class="card__face card__face--front">
+								<div class="top">
+									<div class="artic">326856365</div>
+									<div class="country">
+										<img src="../img/scotland.png" alt="Рашка">
+									</div>
+								</div>
+								<img src="../img/have-time_beer1.png" alt="" width="200px" height="380px">
+								<div class="name_and_price">
+									<div class="name">
+										<span class="first">Jaws Blewery</span>
+										<span class="second">Chomolungma</span>
+									</div>
+									<div class="price">
+										<span class="discount-price">195 ₽</span>
+									</div>
+								</div>
+								<div class="info">
+									<ul>
+										<li>0,33 л</li>
+										<li>5 ABV</li>
+										<li>38 IBU</li>
+										<li>12,5%</li>
+									</ul>
+								</div>
+							</div>
+							<div class="card__face card__face--back">
+								<div class="card__content">
+									<div class="back_top">
+										<div class="back_artic">Артикул: 843756828</div>
+										<div class="back_country">
+											<span>Шотландия</span>
+											<img src="../img/scotland.png" alt="">
+										</div>
+									</div>
+									<div class="back_content">
+										<div class="left_side">
+											<img src="../img/have-time_beer1.png" alt=""  width="200px" height="380px">
+											<span>Old Engine Oil</span>
+											<div class="price">280 ₽</div>
+										</div>
+										<div class="right_side">
+											<span class="back-first">Harviestoun</span>
+											<div class="back_info">
+												<ul>
+													<li>0,33 л</li>
+													<li>16 ABV</li>
+													<li>35 IBU</li>
+													<li>12,5%</li>
+												</ul>
+											</div>
+											<div class="counter">
+												<div class="minus">-</div>
+												<div class="number">2</div>
+												<div class="plus">+</div>
+											</div>
+											<a href="#" class="add-in-backet">В корзине (2)</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card__inner">
+							<div class="card__face card__face--front">
+								<div class="top">
+									<div class="artic">326856365</div>
+									<div class="country">
+										<img src="../img/scotland.png" alt="Рашка">
+									</div>
+								</div>
+								<img src="../img/have-time_beer1.png" alt="" width="200px" height="380px">
+								<div class="name_and_price">
+									<div class="name">
+										<span class="first">Jaws Blewery</span>
+										<span class="second">Chomolungma</span>
+									</div>
+									<div class="price">
+										<span class="discount-price">195 ₽</span>
+									</div>
+								</div>
+								<div class="info">
+									<ul>
+										<li>0,33 л</li>
+										<li>5 ABV</li>
+										<li>38 IBU</li>
+										<li>12,5%</li>
+									</ul>
+								</div>
+							</div>
+							<div class="card__face card__face--back">
+								<div class="card__content">
+									<div class="back_top">
+										<div class="back_artic">Артикул: 843756828</div>
+										<div class="back_country">
+											<span>Шотландия</span>
+											<img src="../img/scotland.png" alt="">
+										</div>
+									</div>
+									<div class="back_content">
+										<div class="left_side">
+											<img src="../img/have-time_beer1.png" alt=""  width="200px" height="380px">
+											<span>Old Engine Oil</span>
+											<div class="price">280 ₽</div>
+										</div>
+										<div class="right_side">
+											<span class="back-first">Harviestoun</span>
+											<div class="back_info">
+												<ul>
+													<li>0,33 л</li>
+													<li>16 ABV</li>
+													<li>35 IBU</li>
+													<li>12,5%</li>
+												</ul>
+											</div>
+											<div class="counter">
+												<div class="minus">-</div>
+												<div class="number">2</div>
+												<div class="plus">+</div>
+											</div>
+											<a href="#" class="add-in-backet">В корзине (2)</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card__inner">
+							<div class="card__face card__face--front">
+								<div class="top">
+									<div class="artic">326856365</div>
+									<div class="country">
+										<img src="../img/scotland.png" alt="Рашка">
+									</div>
+								</div>
+								<img src="../img/have-time_beer1.png" alt="" width="200px" height="380px">
+								<div class="name_and_price">
+									<div class="name">
+										<span class="first">Jaws Blewery</span>
+										<span class="second">Chomolungma</span>
+									</div>
+									<div class="price">
+										<span class="discount-price">195 ₽</span>
+									</div>
+								</div>
+								<div class="info">
+									<ul>
+										<li>0,33 л</li>
+										<li>5 ABV</li>
+										<li>38 IBU</li>
+										<li>12,5%</li>
+									</ul>
+								</div>
+							</div>
+							<div class="card__face card__face--back">
+								<div class="card__content">
+									<div class="back_top">
+										<div class="back_artic">Артикул: 843756828</div>
+										<div class="back_country">
+											<span>Шотландия</span>
+											<img src="../img/scotland.png" alt="">
+										</div>
+									</div>
+									<div class="back_content">
+										<div class="left_side">
+											<img src="../img/have-time_beer1.png" alt=""  width="200px" height="380px">
+											<span>Old Engine Oil</span>
+											<div class="price">280 ₽</div>
+										</div>
+										<div class="right_side">
+											<span class="back-first">Harviestoun</span>
+											<div class="back_info">
+												<ul>
+													<li>0,33 л</li>
+													<li>16 ABV</li>
+													<li>35 IBU</li>
+													<li>12,5%</li>
+												</ul>
+											</div>
+											<div class="counter">
+												<div class="minus">-</div>
+												<div class="number">2</div>
+												<div class="plus">+</div>
+											</div>
+											<a href="#" class="add-in-backet">В корзине (2)</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card__inner">
+							<div class="card__face card__face--front">
+								<div class="top">
+									<div class="artic">326856365</div>
+									<div class="country">
+										<img src="../img/scotland.png" alt="Рашка">
+									</div>
+								</div>
+								<img src="../img/have-time_beer1.png" alt="" width="200px" height="380px">
+								<div class="name_and_price">
+									<div class="name">
+										<span class="first">Jaws Blewery</span>
+										<span class="second">Chomolungma</span>
+									</div>
+									<div class="price">
+										<span class="discount-price">195 ₽</span>
+									</div>
+								</div>
+								<div class="info">
+									<ul>
+										<li>0,33 л</li>
+										<li>5 ABV</li>
+										<li>38 IBU</li>
+										<li>12,5%</li>
+									</ul>
+								</div>
+							</div>
+							<div class="card__face card__face--back">
+								<div class="card__content">
+									<div class="back_top">
+										<div class="back_artic">Артикул: 843756828</div>
+										<div class="back_country">
+											<span>Шотландия</span>
+											<img src="../img/scotland.png" alt="">
+										</div>
+									</div>
+									<div class="back_content">
+										<div class="left_side">
+											<img src="../img/have-time_beer1.png" alt=""  width="200px" height="380px">
+											<span>Old Engine Oil</span>
+											<div class="price">280 ₽</div>
+										</div>
+										<div class="right_side">
+											<span class="back-first">Harviestoun</span>
+											<div class="back_info">
+												<ul>
+													<li>0,33 л</li>
+													<li>16 ABV</li>
+													<li>35 IBU</li>
+													<li>12,5%</li>
+												</ul>
+											</div>
+											<div class="counter">
+												<div class="minus">-</div>
+												<div class="number">2</div>
+												<div class="plus">+</div>
+											</div>
+											<a href="#" class="add-in-backet">В корзине (2)</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card__inner">
+							<div class="card__face card__face--front">
+								<div class="top">
+									<div class="artic">326856365</div>
+									<div class="country">
+										<img src="../img/scotland.png" alt="Рашка">
+									</div>
+								</div>
+								<img src="../img/have-time_beer1.png" alt="" width="200px" height="380px">
+								<div class="name_and_price">
+									<div class="name">
+										<span class="first">Jaws Blewery</span>
+										<span class="second">Chomolungma</span>
+									</div>
+									<div class="price">
+										<span class="discount-price">195 ₽</span>
+									</div>
+								</div>
+								<div class="info">
+									<ul>
+										<li>0,33 л</li>
+										<li>5 ABV</li>
+										<li>38 IBU</li>
+										<li>12,5%</li>
+									</ul>
+								</div>
+							</div>
+							<div class="card__face card__face--back">
+								<div class="card__content">
+									<div class="back_top">
+										<div class="back_artic">Артикул: 843756828</div>
+										<div class="back_country">
+											<span>Шотландия</span>
+											<img src="../img/scotland.png" alt="">
+										</div>
+									</div>
+									<div class="back_content">
+										<div class="left_side">
+											<img src="../img/have-time_beer1.png" alt=""  width="200px" height="380px">
+											<span>Old Engine Oil</span>
+											<div class="price">280 ₽</div>
+										</div>
+										<div class="right_side">
+											<span class="back-first">Harviestoun</span>
+											<div class="back_info">
+												<ul>
+													<li>0,33 л</li>
+													<li>16 ABV</li>
+													<li>35 IBU</li>
+													<li>12,5%</li>
+												</ul>
+											</div>
+											<div class="counter">
+												<div class="minus">-</div>
+												<div class="number">2</div>
+												<div class="plus">+</div>
+											</div>
+											<a href="#" class="add-in-backet">В корзине (2)</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card__inner">
+							<div class="card__face card__face--front">
+								<div class="top">
+									<div class="artic">326856365</div>
+									<div class="country">
+										<img src="../img/scotland.png" alt="Рашка">
+									</div>
+								</div>
+								<img src="../img/have-time_beer1.png" alt="" width="200px" height="380px">
+								<div class="name_and_price">
+									<div class="name">
+										<span class="first">Jaws Blewery</span>
+										<span class="second">Chomolungma</span>
+									</div>
+									<div class="price">
+										<span class="discount-price">195 ₽</span>
+									</div>
+								</div>
+								<div class="info">
+									<ul>
+										<li>0,33 л</li>
+										<li>5 ABV</li>
+										<li>38 IBU</li>
+										<li>12,5%</li>
+									</ul>
+								</div>
+							</div>
+							<div class="card__face card__face--back">
+								<div class="card__content">
+									<div class="back_top">
+										<div class="back_artic">Артикул: 843756828</div>
+										<div class="back_country">
+											<span>Шотландия</span>
+											<img src="../img/scotland.png" alt="">
+										</div>
+									</div>
+									<div class="back_content">
+										<div class="left_side">
+											<img src="../img/have-time_beer1.png" alt=""  width="200px" height="380px">
+											<span>Old Engine Oil</span>
+											<div class="price">280 ₽</div>
+										</div>
+										<div class="right_side">
+											<span class="back-first">Harviestoun</span>
+											<div class="back_info">
+												<ul>
+													<li>0,33 л</li>
+													<li>16 ABV</li>
+													<li>35 IBU</li>
+													<li>12,5%</li>
+												</ul>
+											</div>
+											<div class="counter">
+												<div class="minus">-</div>
+												<div class="number">2</div>
+												<div class="plus">+</div>
+											</div>
+											<a href="#" class="add-in-backet">В корзине (2)</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card__inner">
+							<div class="card__face card__face--front">
+								<div class="top">
+									<div class="artic">326856365</div>
+									<div class="country">
+										<img src="../img/scotland.png" alt="Рашка">
+									</div>
+								</div>
+								<img src="../img/have-time_beer1.png" alt="" width="200px" height="380px">
+								<div class="name_and_price">
+									<div class="name">
+										<span class="first">Jaws Blewery</span>
+										<span class="second">Chomolungma</span>
+									</div>
+									<div class="price">
+										<span class="discount-price">195 ₽</span>
+									</div>
+								</div>
+								<div class="info">
+									<ul>
+										<li>0,33 л</li>
+										<li>5 ABV</li>
+										<li>38 IBU</li>
+										<li>12,5%</li>
+									</ul>
+								</div>
+							</div>
+							<div class="card__face card__face--back">
+								<div class="card__content">
+									<div class="back_top">
+										<div class="back_artic">Артикул: 843756828</div>
+										<div class="back_country">
+											<span>Шотландия</span>
+											<img src="../img/scotland.png" alt="">
+										</div>
+									</div>
+									<div class="back_content">
+										<div class="left_side">
+											<img src="../img/have-time_beer1.png" alt=""  width="200px" height="380px">
+											<span>Old Engine Oil</span>
+											<div class="price">280 ₽</div>
+										</div>
+										<div class="right_side">
+											<span class="back-first">Harviestoun</span>
+											<div class="back_info">
+												<ul>
+													<li>0,33 л</li>
+													<li>16 ABV</li>
+													<li>35 IBU</li>
+													<li>12,5%</li>
+												</ul>
+											</div>
+											<div class="counter">
+												<div class="minus">-</div>
+												<div class="number">2</div>
+												<div class="plus">+</div>
+											</div>
+											<a href="#" class="add-in-backet">В корзине (2)</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card__inner">
+							<div class="card__face card__face--front">
+								<div class="top">
+									<div class="artic">326856365</div>
+									<div class="country">
+										<img src="../img/scotland.png" alt="Рашка">
+									</div>
+								</div>
+								<img src="../img/have-time_beer1.png" alt="" width="200px" height="380px">
+								<div class="name_and_price">
+									<div class="name">
+										<span class="first">Jaws Blewery</span>
+										<span class="second">Chomolungma</span>
+									</div>
+									<div class="price">
+										<span class="discount-price">195 ₽</span>
+									</div>
+								</div>
+								<div class="info">
+									<ul>
+										<li>0,33 л</li>
+										<li>5 ABV</li>
+										<li>38 IBU</li>
+										<li>12,5%</li>
+									</ul>
+								</div>
+							</div>
+							<div class="card__face card__face--back">
+								<div class="card__content">
+									<div class="back_top">
+										<div class="back_artic">Артикул: 843756828</div>
+										<div class="back_country">
+											<span>Шотландия</span>
+											<img src="../img/scotland.png" alt="">
+										</div>
+									</div>
+									<div class="back_content">
+										<div class="left_side">
+											<img src="../img/have-time_beer1.png" alt=""  width="200px" height="380px">
+											<span>Old Engine Oil</span>
+											<div class="price">280 ₽</div>
+										</div>
+										<div class="right_side">
+											<span class="back-first">Harviestoun</span>
+											<div class="back_info">
+												<ul>
+													<li>0,33 л</li>
+													<li>16 ABV</li>
+													<li>35 IBU</li>
+													<li>12,5%</li>
+												</ul>
+											</div>
+											<div class="counter">
+												<div class="minus">-</div>
+												<div class="number">2</div>
+												<div class="plus">+</div>
+											</div>
+											<a href="#" class="add-in-backet">В корзине (2)</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</main>
+				<footer class="catalog_footer">
+					<a class="catalog_show-more" href="">Показать ещё</a>
+					<div class="catalog_footer-pagination">
+						<ul>
+							<li><a class="catalog_footer-pagination_active" href="">1</a></li>
+							<li><a href="">2</a></li>
+							<li><a href="">3</a></li>
+							<li><a href="">4</a></li>
+							<li><a href="">5</a></li>
+							<li><a href="">...</a></li>
+							<li><a href=""><img src="../img/arrow_next.png" alt=""></a></li>
+						</ul>
+					</div>
+				</footer>
+			</article>
+
+
+
+
+
+		</main>
+		<footer class="main-footer">
+			<div class="footer_left-side_navigation">
+				<nav>
+					<ul>
+						<li><a href="#">Каталог пива</a></li>
+						<li><a href="#">Экскурсии</a></li>
+						<li><a href="#">Каталог снеков</a></li>
+						<li><a href="#">О крафтовом пиве</a></li>
+						<li><a href="#">Каталог пивной посуды</a></li>
+						<li><a href="#">Спорт и пиво</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="footer_logo">
+				<img src="../img/logo_footer.png" alt="">
+				<p class="footer_copyright">© 2021 ГлавПивМаг</p>
+			</div>
+			<div class="footer_right-side_navigation">
+				<nav>
+					<ul>
+						<li><a href="#">Бар</a></li>
+						<li><a href="#">Заказы</a></li>
+						<li><a href="#">Скидки</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="footer_social-media">
+				<ul>
+					<li><a href="#"><img src="../img/youtube.png" alt=""></a></li>
+					<li><a href="#"><img src="../img/vk.png" alt=""></a></li>
+					<li><a href="#"><img src="../img/facebook.png" alt=""></a></li>
+					<li><a href="#"><img src="../img/inst.png" alt=""></a></li>
+					<li><a href="#"><img src="../img/google.png" alt=""></a></li>
+				</ul>
+			</div>
+		</footer>
+
+		<script src="../src/nouislider.min.js"></script>
+		<script src="js/catalog.js"></script>
+	</body>
+</html>
