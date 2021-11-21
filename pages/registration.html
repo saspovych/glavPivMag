@@ -7,7 +7,7 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="style/basket.css">
+		<link rel="stylesheet" href="style/registration.css">
 	</head>
 	<body>
 		<header class="main-header">
@@ -50,13 +50,13 @@
 								</a>
 								<span class="right-side_button-name">Заказы</span>
 							</div>
-							<div class="right-side_button">
+							<div class="right-side_button active">
 								<a  href="authorization.html">
 									<img src="../img/autoriz.png" alt="Авторизация" width="26px" height="28px">
 								</a>
 								<span class="right-side_button-name">Авторизация</span>
 							</div>
-							<div class="right-side_button active">
+							<div class="right-side_button">
 								<a href="basket.html">
 									<img src="../img/basket.png" alt="Корзина" width="33px" height="28px">
 								</a>
@@ -69,130 +69,38 @@
 			</div>
 		</header>
 		<main class="major-main">
-			<div class="basket_left-side">
-				<div class="basket_container">
-					<h2 class="basket-title">Корзина</h2>
-					<div class="basket-products">
-						<div class="basket_product">
-							<img src="../img/basket_beer-1.png" alt="">
-							<div class="basket-product-description">
-								<h3>Dog B</h3>
-								<p>Производитель: Brew Dog</p>
-								<p>Страна производителя: Шотладния</p>
-								<p>Объем: 0,33 л</p>
-								<p>Артикул: 326856365</p>
-							</div>
-							<div class="basket_counter">
-								<div class="minus">-</div>
-								<div class="number">2</div>
-								<div class="plus">+</div>
-							</div>
-							<div class="basket_price-and-delete">
-								<div class="basket_price">1780 ₽ </div>
-								<div class="basket_delete">Удалить</div>
-							</div>
+			<div class="auth_wrapper">
+				<div class="auth_container">
+					<div class="auth_title">
+						<h2>Войти в свой профиль</h2>
+					</div>
+					<form>
+						<label for="first-name">Имя</label>
+						<div class="reg_custom-input">
+							<input type="text" id="first-name" placeholder="Введите ваше имя" oninput="checkInputOnCorrect(id)">
 						</div>
-						<div class="basket_product">
-							<img src="../img/basket_beer-2.png" alt="">
-							<div class="basket-product-description">
-								<h3>Jaws Lager</h3>
-								<p>Производитель: Jaws Brewery</p>
-								<p>Страна производителя: Россия</p>
-								<p>Объем: 0,33 л</p>
-								<p>Артикул: 890647638</p>
-							</div>
-							<div class="basket_counter">
-								<div class="minus">-</div>
-								<div class="number">6</div>
-								<div class="plus">+</div>
-							</div>
-							<div class="basket_price-and-delete">
-								<div class="basket_current-and-discount-price">
-									<div class="basket_price">1053 ₽ </div>
-									<div class="basket_discount-price">1353 ₽</div>
-								</div>
-								<div class="basket_delete">Удалить</div>
-							</div>
+						<label for="last-name">Фамилия</label>
+						<div class="reg_custom-input">
+							<input type="text" id="last-name" placeholder="Введите вашу фамилию" oninput="checkInputOnCorrect(id)">
 						</div>
-					</div>
-				</div>
-				<div class="basket_data">
-					<div class="basket_title">
-						<h2 class="basket-title">Ваши данные</h2>
-						<a href="authorization.html" class="sing-in">Войти</a>
-					</div>
-					<div class="basket_data-contant">
-						<form>
-							<div>
-								<label for="first-name">Имя</label>
-								<div class="basket_custom-input">
-									<input type="text" id="first-name" placeholder="Введите ваше имя" oninput="checkInputOnCorrect(id)">
-								</div>
-							</div>
-							<div>
-								<label for="number">Контактный телефон</label>
-								<div class="basket_custom-input">
-									<input type="tel" id="number" placeholder="+7 (___) ___-__-__  " oninput="checkInputOnCorrect(id)">
-								</div>
-							</div>
-							<div>
-								<label for="last-name">Фамилия</label>
-								<div class="basket_custom-input">
-									<input type="text" id="last-name" placeholder="Введите вашу фамилию" oninput="checkInputOnCorrect(id)">
-								</div>
-							</div>
-							<div>
-								<label for="mail">Электронная почта - <span>необязательно</span></label>
-								<div class="basket_custom-input">
-									<input type="email" id="mail" placeholder="Укажите вашу почту" oninput="checkInputOnCorrect(id)">
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-				<div class="basket_receiving-an-order">
-					<h2 class="basket-title">Получение заказа</h2>
-					<div class="basket_receiving-an-order_contant">
-						<div class="basket_delivery-method">
-							<div class="basket_delivery-method_radio">
-								<input type="radio" id="on_bar" name="receiving-and-order">
-								<label for="on_bar">Забрать из бара</label>
-							</div>
-							<div class="basket_delivery-method_radio">
-								<input type="radio" id="delivery" name="receiving-and-order">
-								<label for="delivery">Доставка</label>
-							</div>
+						<label for="number">Контактный телефон</label>
+						<div class="reg_custom-input">
+							<input type="tel" id="number" placeholder="+7 (___) ___-__-__  " oninput="checkInputOnCorrect(id)">
 						</div>
-						<div class="basket_adress">
-							<p>г. Москва, ул. Новый Арбат, д. 5</p>
-							<a href="">Выбрать другой бар</a>
+						<label for="mail">Электронная почта <span class="not-necessary">- необязательно</span></label>
+						<div class="reg_custom-input">
+							<input type="email" id="mail" placeholder="Укажите вашу почту" oninput="checkInputOnCorrect(id)">
 						</div>
+					</form>
+
+					<button class="reg-button">СОЗДАТЬ ПРОФИЛЬ</button>
+					<p class="reg_description">
+						Нажимая на кнопку, я соглашаюсь на обработку <a href="">персональных данных</a>
+					</p>
+					<div class="auth">
+						<p>У вас уже есть профиль? <a href="authorization.html">Войдите</a></p>
 					</div>
 				</div>
-				<div class="basket_payment-method">
-					<h2 class="basket-title">Способ оплаты</h2>
-					<a href="">Изменить</a>
-				</div>
-			</div>
-			<div class="basket_total">
-				<div class="basket_total-price">
-					<h3>Итого</h3>
-					<div class="total-price">2833 ₽</div>
-				</div>
-				<div>
-					<p>Товары 8 шт.</p>
-				</div>
-				<div class="discount-info">
-					<div class="discount">
-						<p>Скидка</p>
-						<a class="more-details" href="#">Подробнее</a>
-					</div>
-					<p class="discount-summ">300 ₽</p>
-				</div>
-				<div class="basket_promo-code">
-					<p>Промокод</p>
-				</div>
-				<a href="#" class="basket_place-on-order">ОФОРМИТЬ ЗАКАЗ</a>
 			</div>
 		</main>
 		<footer class="main-footer">
@@ -264,6 +172,6 @@
 				</ul>
 			</div>
 		</footer>
-		<script src="js/basket.js"></script>
+		<script src="js/registration.js"></script>
 	</body>
 </html>

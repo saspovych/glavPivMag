@@ -12,9 +12,28 @@ ul {
 a {
 	text-decoration: none;
 }
+button,
+input {
+	font-family: 'Roboto', sans-serif;
+}
 .wrapper {
 	width: 95%;
 	margin: 0 auto;
+}
+
+
+.swiper-button-prev {
+    color: #F0F0F0;
+}
+
+.swiper-button-next {
+    color: #F0F0F0;
+}
+
+.swiper-pagination-bullet-active {
+	background: #F2B918;
+	transform: scale(1.2);
+	transition: all 0.3s ease;
 }
 
 /* HEADER */
@@ -63,12 +82,18 @@ header {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-
 			width: 30vw;
 			padding: 20px 22px;
-
 			background-color: rgba(255, 255, 255, 0.5);
 			border-radius: 100px;
+			cursor: text;
+			transition: all 0.3s;
+
+			&.focused {
+				transition: all 0.3s;
+				box-shadow: 0px 0px 10px 2px #8D8D8D;
+				background-color: #FFFFFF;
+			}
 
 			& input[type="search"] {
 				background-color: transparent;
@@ -78,6 +103,10 @@ header {
 				&:focus {
 					outline: none;
 				}
+			}
+
+			& img {
+				cursor: pointer;
 			}
 		}
 
@@ -96,10 +125,10 @@ header {
 				background-color: rgba(255, 255, 255, 0.5);
 				border-radius: 100px;
 
-				transition: all 0.7s;
+				transition: all 0.3s;
 
 				&:hover {
-					transition: all 0.7s;
+					transition: all 0.3s;
 					box-shadow: 0px 0px 10px 2px #8D8D8D;
 					background-color: #FFFFFF;
 				}
@@ -119,48 +148,38 @@ header {
 			align-items: center;
 
 			& li {
-				margin-right: 32px;
+				margin-right: 5px;
+				display: block;
 				position: relative;
+				border-radius: 100px;
+				-webkit-transition: background-color 0.3s ease;
+   				-ms-transition: background-color 0.3s ease;
+				transition: background-color 0.3s ease;
 
 				& a {
 					color: #171717;
-
-					position: relative;
-
-					&::after {
-						display: block;
-						position: absolute;
-						left: 0;
-						width: 0;
-						height: 2px;
-						background-color: #171717;
-						content: "";
-						transition: width 0.5s ease-out;
-					}
-
-					&:hover {
-						&::after,
-						&:focus {
-							width: 100%;
-						}
-					}
+					display: block;
+					padding: 13px 17px;
 				}
 
 				&:first-child {
-					margin-right: 46px;
+					margin-right: 10px;
+					padding-right: 20px;
+				}
+
+				&:hover {
+					background-color: rgba(255, 255, 255, 0.3);
 				}
 
 				&:first-child::after {
 					content: "";
 					display: block;
-
 					position: absolute;
-					right: -20px;
-					top: 5px;
-
+					right: 15px;
+					top: 60%;
+					transform: translateY(-60%);
 					width: 15px;
 					height: 15px;
-
 					background: url('../../img/down_arrow.png') no-repeat;
 				}
 			}
@@ -178,10 +197,11 @@ header {
 
 				position: relative;
 
-				transition: all 0.7s;
+				transition: all 0.3s;
 
-				&:hover  a{
-					transition: all 0.7s;
+				&:hover  a,
+				&.active a {
+					transition: all 0.3s;
 					box-shadow: 0px 0px 10px 2px #8D8D8D;
 					background-color: #FFFFFF;
 				}
@@ -213,15 +233,12 @@ header {
 				& .right-side_in-basket {
 					line-height: 20px;
 					text-align: center;
-
 					display: block;
 					width: 20px;
 					height: 20px;
-
 					position: absolute;
 					top: 15px;
 					right: 10px;
-
 					border-radius: 50%;
 					background-color: #F2B918;
 				}
@@ -245,17 +262,13 @@ main {
 
 	 	& .title-swiper_beer {
 			position: absolute;
-
 			z-index: 2;
 			opacity: 0;
 			visibility: hidden;
-
 			right: 70px;
 			top: -60px;
-
 			background-color: #fff;
 			width: 400px;
-
 			transition:  opacity 1.2s ease, visibility 0s;
 
 			& div {
@@ -269,18 +282,14 @@ main {
 					position: absolute;
 					top: 50px;
 					left: -160px;
-
 					opacity: 0;
-
 					transition:  all 1.2s ease;
 				}
 
 				& .title-swiper_beer2 {
 					position: absolute;
-
 					opacity: 0;
 					transform: scale(1.5);
-
 					transition:  all 1.2s ease;
 				}
 
@@ -288,9 +297,7 @@ main {
 					position: absolute;
 					left: 200px;
 					top: 65px;
-
 					opacity: 0;
-
 					transition:  all 1.2s ease;
 				}
 			}
@@ -304,7 +311,6 @@ main {
 				& .title-swiper_beer1 {
 					left: -120px;
 					opacity: 1;
-
 					transition:  all 1.2s ease;
 				}
 
@@ -312,7 +318,6 @@ main {
 					top: 0px;
 					transform: scale(1);
 					opacity: 1;
-
 					transition:  all 1.2s ease;
 				}
 
@@ -376,13 +381,13 @@ main {
 					border: 1px solid #F2B918;
 					border-radius: 8px;
 
-					transition: all 0.4s ease;
+					transition: all 0.3s ease;
 
 					&:hover {
-						background-color: transparent;
+						background-color: #171717;
 						color: #F2B918;
 
-						transition: all 0.4s ease;
+						transition: all 0.3s ease;
 					}
 				}
 				& .title-swiper_asterix {
@@ -421,14 +426,14 @@ main {
 		width: 350px;
 		height: 600px;
 		perspective: 1000px;
-
 		margin: 50px 0 0 50px;
-
 		color: #F0F0F0;
 	}
+
 	& .card img {
 		object-fit: cover;
 	}
+
 	& .card__inner {
 		width: 100%;
 		height: 100%;
@@ -568,10 +573,9 @@ main {
 		display: flex;
 		flex-direction: column;
 
-		& .back-second {
+		& span {
 			font-size: 24px;
 			font-weight: 700;
-
 			margin-bottom: 20px;
 		}
 
@@ -606,40 +610,79 @@ main {
 
 
 		& .back_info {
-			margin-bottom: 130px;
+			margin-bottom: 100px;
 		}
 
-		/* & ul li:nth-child(1)::before {
-			content: "";
-			display: inline-block;
-			background: url('../../img/card-bottle.png') no-repeat;
+		& li {
+			position: relative;
 
-			width: 8px;
-			height: 30px;
-		} */
+			&::before {
+				content: "";
+				display: inline-block;
+				background: url('../../img/card-bottle.png') no-repeat;
+				position: absolute;
+				left: -20px;
+				top: 50%;
+				transform: translateY(-50%);
+				width: 8px;
+				height: 30px;
+			}
+
+			&:nth-child(2)::before {
+				content: '';
+				width: 21px;
+				height: 24px;
+				position: absolute;
+				left: -25px;
+				background: url('../../img/card-barrel.png') no-repeat;
+			}
+
+			&:nth-child(3)::before {
+				content: '';
+				width: 13px;
+				height: 24px;
+				position: absolute;
+				left: -22px;
+				background: url('../../img/card-bitterness.png') no-repeat;
+			}
+			&:nth-child(4)::before {
+				content: '';
+				width: 22px;
+				height: 21px;
+				position: absolute;
+				left: -28px;
+				background: url('../../img/card-density.png') no-repeat;
+			}
+ 		}
+
 
 
 		& .counter {
 			display: flex;
 			align-items: center;
-
 			margin-bottom: 20px;
-
 			border: 1px solid #F2B918;
 			border-radius: 8px;
 
 			& .minus,
 			& .plus {
 				font-size: 18px;
-
 				color: #F0F0F0;
-
 				padding: 5px 10px;
 
 				&:hover {
-					background-color: #fff;
+					background-color: #F2B918;
+					color: #171717;
 				}
 			}
+			& .plus {
+				border-radius: 0 6px 6px 0;
+			}
+
+			& .minus {
+				border-radius: 6px 0 0 6px;
+			}
+
 			& .number {
 				font-size: 18px;
 
@@ -662,13 +705,13 @@ main {
 			border: 1px solid #F2B918;
 			border-radius: 10px;
 
-			transition: all 0.4s ease;
+			transition: all 0.3s ease;
 
 			&:hover {
 				color: #F2B918;
 				background-color: transparent;
 
-				transition: all 0.4s ease;
+				transition: all 0.3s ease;
 			}
 		}
 	}
@@ -694,39 +737,36 @@ main {
 
 				width: 210px;
 				height: 300px;
-
 				border-radius: 10px;
-
 				overflow: hidden;
-
 				transition: all 1s ease;
 
 				&:hover {
 					background-color: rgba(141, 141, 141, 1);
-
 					transition: all 1s ease;
 
 					& .brewery_hidden-block {
 						visibility: visible;
-
 						transition: all 1s ease;
 
 						& .snake-arrow {
 							left: 0;
-
 							transition: all 1s ease;
 						}
 
 						& .brewery-name {
 							right: 0;
-
 							transition: all 1s ease;
 						}
 
 						& .brewery_more-info {
 							opacity: 1;
-
 							transition: all 1s ease;
+
+							&:hover {
+								background-color: #171717;
+								color: #F2B918;
+							}
 						}
 					}
 
@@ -825,34 +865,34 @@ main {
 				& p {
 					font-size: 18px;
 					font-weight: 400;
-
 					margin: 16px 0 26px 0;
 				}
 				& .blog-item_more-info {
-					display: block;
-					padding: 20px 60px 20px 35px;
-
+					display: flex;
+					align-items: center;
+					padding: 20px 40px 20px 35px;
 					position: absolute;
-
 					font-size: 20px;
-
 					color: #171717;
 					background: #F2B918;
+					border: 1px solid #F2B918;
 					border-radius: 10px;
+					transition: all 0.3s ease;
 
-					&::after {
-						content: '';
-						display: block;
-						width: 20px;
-						height: 20px;
+					& span {
+						margin-right: 20px;
+					}
 
-						position: absolute;
-						right: 25px;
-						top: 50%;
-						transform: translateY(-50%);
+					&:hover {
+						background-color: #171717;
+						color: #F2B918;
+						transition: all 0.3s ease;
 
-						background: url('../../img/more-info_arrow.png') no-repeat;
-						background-size: 100% 100%;
+
+						& svg path {
+							stroke: #F2B918;
+							transition: all 0.3s ease;
+						}
 					}
 				}
 			}
@@ -865,25 +905,28 @@ main {
 		& .recently-watched_title {
 			display: flex;
 			align-items: center;
-
 			margin-bottom: 41px;
 
 			& h2 {
 				font-size: 32px;
 				font-weight: 700;
-
 				margin-right: 15px;
-
 				color: #F0F0F0;
 			}
 
 			& .recently-watched_watch-all {
 				display: block;
 				padding: 10px 25px;
-
 				color: #F0F0F0;
 				border: 2px solid #F2B918;
 				border-radius: 100px;
+				transition: all 0.3s ease;
+
+				&:hover {
+					background-color: #F2B918;
+					color: #171717;
+					transition: all 0.3s ease;
+				}
 			}
 		}
 
@@ -898,18 +941,14 @@ main {
 footer {
 	width: 100%;
 	height: 288px;
-
 	padding: 100px 100px 70px 100px;
-
 	background: url('../../img/bg_footer.png') no-repeat;
-
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 
 	& a {
 		font-size: 18px;
-
 		color: #F0F0F0;
 	}
 
@@ -923,14 +962,11 @@ footer {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-
 		margin-right: 30px;
 
 		& .footer_copyright {
 			font-size: 14px;
-
 			margin-top: 15px;
-
 			color: #F0F0F0;
 		}
 	}
@@ -943,6 +979,35 @@ footer {
 
 	& .footer_social-media {
 		align-self: flex-end;
+
+		& svg path {
+			transition: all 0.3s ease;
+		}
+
+		& .youtube:hover path {
+			fill: #EF101C;
+			transition: all 0.3s ease;
+		}
+
+		& .vk:hover path {
+			fill: #2A6AB6;
+			transition: all 0.3s ease;
+		}
+
+		& .facebook:hover path {
+			fill: #1A4ADF;
+			transition: all 0.3s ease;
+		}
+
+		& .inst:hover path {
+			fill: #2E5166;
+			transition: all 0.3s ease;
+		}
+
+		& .google:hover path {
+			fill: #CB1700;
+			transition: all 0.3s ease;
+		}
 	}
 
 	& .footer_social-media ul {

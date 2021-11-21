@@ -1,3 +1,17 @@
+const searchForm = document.querySelector('form')
+const searcher = document.querySelector('.searcher')
+searchForm.addEventListener('click', () => {
+  searcher.focus()
+})
+
+searcher.addEventListener('focus', () => {
+    searcher.parentElement.classList.add('focused')
+})
+searcher.addEventListener('focusout', () => {
+  searcher.parentElement.classList.remove('focused')
+})
+
+
 const card = document.querySelectorAll(".card__inner");
 const plus = document.querySelectorAll(".plus");
 const minus = document.querySelectorAll(".minus");

@@ -17,6 +17,11 @@ a {
   text-decoration: none;
 }
 
+button,
+input {
+  font-family: "Roboto", sans-serif;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -94,6 +99,16 @@ input[type=number] {
   padding: 20px 22px;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 100px;
+  cursor: text;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.main-header .right-side_top form.focused {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-box-shadow: 0px 0px 10px 2px #8D8D8D;
+          box-shadow: 0px 0px 10px 2px #8D8D8D;
+  background-color: #FFFFFF;
 }
 .main-header .right-side_top form input[type=search] {
   background-color: transparent;
@@ -102,6 +117,9 @@ input[type=number] {
 }
 .main-header .right-side_top form input[type=search]:focus {
   outline: none;
+}
+.main-header .right-side_top form img {
+  cursor: pointer;
 }
 .main-header .right-side_top .right-side_order {
   display: -webkit-box;
@@ -153,41 +171,36 @@ input[type=number] {
           align-items: center;
 }
 .main-header .right-side_bottom .right-side_navigation ul li {
-  margin-right: 32px;
+  margin-right: 5px;
+  display: block;
   position: relative;
+  border-radius: 100px;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+.main-header .right-side_bottom .right-side_navigation ul li.right-side_active {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 .main-header .right-side_bottom .right-side_navigation ul li a {
   color: #171717;
-  position: relative;
-}
-.main-header .right-side_bottom .right-side_navigation ul li a::after {
   display: block;
-  position: absolute;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: #171717;
-  content: "";
-  -webkit-transition: width 0.5s ease-out;
-  transition: width 0.5s ease-out;
-}
-.main-header .right-side_bottom .right-side_navigation ul li a:hover::after, .main-header .right-side_bottom .right-side_navigation ul li a:hover:focus {
-  width: 100%;
-}
-.main-header .right-side_bottom .right-side_navigation ul li a.right-side_active {
-  padding: 15px 45px 15px 15px;
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 100px;
+  padding: 13px 17px;
 }
 .main-header .right-side_bottom .right-side_navigation ul li:first-child {
-  margin-right: 26px;
+  margin-right: 10px;
+  padding-right: 20px;
+}
+.main-header .right-side_bottom .right-side_navigation ul li:hover {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 .main-header .right-side_bottom .right-side_navigation ul li:first-child::after {
   content: "";
   display: block;
   position: absolute;
-  right: 10px;
-  top: 5px;
+  right: 15px;
+  top: 60%;
+  -webkit-transform: translateY(-60%);
+          transform: translateY(-60%);
   width: 15px;
   height: 15px;
   background: url("../../img/down_arrow.png") no-repeat;
@@ -221,7 +234,7 @@ input[type=number] {
   -webkit-transition: all 0.7s;
   transition: all 0.7s;
 }
-.main-header .right-side_bottom .right-side_account-buttons .right-side_button:hover a {
+.main-header .right-side_bottom .right-side_account-buttons .right-side_button:hover a, .main-header .right-side_bottom .right-side_account-buttons .right-side_button.active a {
   -webkit-transition: all 0.7s;
   transition: all 0.7s;
   -webkit-box-shadow: 0px 0px 10px 2px #8D8D8D;
@@ -279,6 +292,130 @@ input[type=number] {
   border-radius: 34px;
   background-color: #171717;
 }
+.major-main .auth_wrapper h2 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  border-bottom: 1px solid rgba(141, 141, 141, 0.5);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+.major-main .auth_wrapper .tab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+.major-main .auth_wrapper .tab button {
+  background-color: #171717;
+  width: 50%;
+  color: #F0F0F0;
+  font-size: 12px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 13px 0;
+  margin-bottom: 40px;
+  opacity: 0.5;
+}
+.major-main .auth_wrapper .tab button:hover {
+  opacity: 1;
+}
+.major-main .auth_wrapper .tab button.active {
+  opacity: 1;
+  border-bottom: 2px solid #F2B918;
+}
+.major-main .auth_wrapper .tabcontent {
+  display: none;
+}
+.major-main .auth_wrapper .tabcontent form, .major-main .auth_wrapper .tabcontent .auth_form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.major-main .auth_wrapper .tabcontent form input, .major-main .auth_wrapper .tabcontent .auth_form input {
+  width: 80%;
+  background-color: inherit;
+  outline: none;
+  border: none;
+  padding: 0 12px;
+  color: #F0F0F0;
+  font-size: 14px;
+}
+.major-main .auth_wrapper .tabcontent form label, .major-main .auth_wrapper .tabcontent .auth_form label {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+.major-main .auth_wrapper .tabcontent form .auth_custom-input, .major-main .auth_wrapper .tabcontent .auth_form .auth_custom-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 48px;
+  border: 1px solid #8D8D8D;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.major-main .auth_wrapper .tabcontent form .auth_custom-input.correct, .major-main .auth_wrapper .tabcontent .auth_form .auth_custom-input.correct {
+  border-color: #F2B918;
+}
+.major-main .auth_wrapper .tabcontent form .auth_custom-input.correct::after, .major-main .auth_wrapper .tabcontent .auth_form .auth_custom-input.correct::after {
+  content: "";
+  width: 18px;
+  height: 12px;
+  margin-right: 12px;
+  display: block;
+  background: url("../../img/correct.png") center/cover no-repeat;
+}
+.major-main .auth_wrapper .tabcontent form .auth_custom-input.wrong, .major-main .auth_wrapper .tabcontent .auth_form .auth_custom-input.wrong {
+  border-color: #D80027;
+}
+.major-main .auth_wrapper .tabcontent form .auth_custom-input.wrong::after, .major-main .auth_wrapper .tabcontent .auth_form .auth_custom-input.wrong::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  margin-right: 12px;
+  display: block;
+  background: url("../../img/wrong.png") center/cover no-repeat;
+}
+.major-main .auth_wrapper .auth_submit-button {
+  width: 100%;
+  height: 56px;
+  font-size: 14px;
+  color: #8D8D8D;
+  background-color: #171717;
+  border: 2px solid #8D8D8D;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 50px;
+}
+.major-main .auth_wrapper .reg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.major-main .auth_wrapper .reg p {
+  font-size: 14px;
+}
+.major-main .auth_wrapper .reg p a {
+  color: #F2B918;
+}
 
 .main-footer {
   width: 100%;
@@ -330,6 +467,35 @@ input[type=number] {
 .main-footer .footer_social-media {
   -ms-flex-item-align: end;
       align-self: flex-end;
+}
+.main-footer .footer_social-media svg path {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.main-footer .footer_social-media .youtube:hover path {
+  fill: #EF101C;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.main-footer .footer_social-media .vk:hover path {
+  fill: #2A6AB6;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.main-footer .footer_social-media .facebook:hover path {
+  fill: #1A4ADF;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.main-footer .footer_social-media .inst:hover path {
+  fill: #2E5166;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.main-footer .footer_social-media .google:hover path {
+  fill: #CB1700;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .main-footer .footer_social-media ul {
   display: -webkit-box;

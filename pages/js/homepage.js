@@ -1,13 +1,26 @@
+const searchForm = document.querySelector('form')
+const searcher = document.querySelector('.searcher')
+searchForm.addEventListener('click', () => {
+  searcher.focus()
+})
+
+searcher.addEventListener('focus', () => {
+    searcher.parentElement.classList.add('focused')
+})
+searcher.addEventListener('focusout', () => {
+  searcher.parentElement.classList.remove('focused')
+})
+
 const titleSwiper = new Swiper('.title-swiper_swiper', {
   loop: true,
   speed: 1200,
   simulateTouch: false,
   spaceBetween: 30,
 
-  // autoplay: {
-  //   delay: 4000,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
 
   pagination: {
     el: '.swiper-pagination',
@@ -20,7 +33,6 @@ const titleSwiper = new Swiper('.title-swiper_swiper', {
   },
 });
 
-
 const beer = document.querySelector('.title-swiper_beer')
 titleSwiper.on('slideChange', function () {
   if (titleSwiper.realIndex == 0) {
@@ -29,14 +41,6 @@ titleSwiper.on('slideChange', function () {
     beer.classList.remove('title-swiper_active')
   }
 });
-
-
-
-
-
-
-
-
 
 const card = document.querySelectorAll(".card__inner");
 const plus = document.querySelectorAll(".plus");
@@ -67,18 +71,6 @@ minus.forEach(item => {
   })
 })
 
-
-// TODO: Когда будет реализован переход в корзину
-//  этот кусок кода нужно удалить
-addInBacket.forEach(item => {
-  item.addEventListener('click', event => {
-    let cardInner = item.closest('.card__inner')
-    cardInner.classList.add('no-flip')
-  })
-})
-
-
-
 card.forEach(item => {
   item.addEventListener('click', event => {
       if(item.classList.contains('no-flip')) {
@@ -88,9 +80,6 @@ card.forEach(item => {
       }
   })
 })
-
-
-
 
 const haveTimeSwiper = new Swiper('.have-time_swiper', {
   speed: 800,
@@ -104,12 +93,6 @@ const haveTimeSwiper = new Swiper('.have-time_swiper', {
   },
 });
 
-
-
-
-
-
-
 const breweries = new Swiper('.breweries-swiper', {
   loop: true,
   speed: 800,
@@ -122,11 +105,6 @@ const breweries = new Swiper('.breweries-swiper', {
     prevEl: '.swiper-button-prev',
   },
 });
-
-
-
-
-
 
 const recentlyWatched = new Swiper('.recently-watched_swiper', {
   speed: 800,

@@ -272,99 +272,69 @@ input[type=number] {
 			margin-bottom: 20px;
 		}
 
+  		& form {
+  			display: flex;
+  			flex-direction: column;
 
-		& .tab {
-			display: flex;
-			width: 100%;
-			overflow: hidden;
+  			& input {
+  				width: 80%;
+  				background-color: inherit;
+  				outline: none;
+  				border: none;
+  				padding: 0 12px;
+  				color: #F0F0F0;
+  				font-size: 14px;
+  			}
 
-			& button {
-				background-color: #171717;
-				width: 50%;
-				color: #F0F0F0;
-				font-size: 12px;
-				border: none;
-				outline: none;
-				cursor: pointer;
-				padding: 13px 0;
-				margin-bottom: 40px;
-				opacity: 0.5;
-			}
+  			& label {
+  				font-size: 16px;
+  				margin-bottom: 12px;
+  			}
 
-			& button:hover {
-				opacity: 1;
-			}
+  			& .reg_custom-input {
+  				display: flex;
+  				justify-content: space-between;
+  				align-items: center;
+  				width: 100%;
+  				height: 48px;
+  				border: 1px solid #8D8D8D;
+				border-radius: 4px;
+  				margin-bottom: 24px;
+  				transition: all 0.3s ease;
 
-			& button.active {
-				opacity: 1;
-				border-bottom: 2px solid #F2B918;
-			}
-		}
+  				&.correct {
+  					border-color: #F2B918;
 
-		& .tabcontent {
-			display: none;
+					&::after {
+						content: '';
+						width: 18px;
+						height: 12px;
+						margin-right: 12px;
+						display: block;
+						background: url('../../img/correct.png') center / cover no-repeat;
+					}
+  				}
 
-	  		& form,
-	  		& .auth_form {
-	  			display: flex;
-	  			flex-direction: column;
+  				&.wrong {
+  					border-color: #D80027;
 
-	  			& input {
-	  				width: 80%;
-	  				background-color: inherit;
-	  				outline: none;
-	  				border: none;
-	  				padding: 0 12px;
-	  				color: #F0F0F0;
-	  				font-size: 14px;
-	  			}
+  					&::after {
+						content: '';
+						width: 12px;
+						height: 12px;
+						margin-right: 12px;
+						display: block;
+						background: url('../../img/wrong.png') center / cover no-repeat;
+  					}
+  				}
+  			}
 
-	  			& label {
-	  				font-size: 16px;
-	  				margin-bottom: 12px;
-	  			}
+  			& .not-necessary {
+  				opacity: 0.4;
+  			}
+  		}
 
-	  			& .auth_custom-input {
-	  				display: flex;
-	  				justify-content: space-between;
-	  				align-items: center;
-	  				width: 100%;
-	  				height: 48px;
-	  				border: 1px solid #8D8D8D;
-					border-radius: 4px;
-	  				margin-bottom: 24px;
-	  				transition: all 0.3s ease;
-
-	  				&.correct {
-	  					border-color: #F2B918;
-
-						&::after {
-							content: '';
-							width: 18px;
-							height: 12px;
-							margin-right: 12px;
-							display: block;
-							background: url('../../img/correct.png') center / cover no-repeat;
-						}
-	  				}
-
-	  				&.wrong {
-	  					border-color: #D80027;
-
-	  					&::after {
-							content: '';
-							width: 12px;
-							height: 12px;
-							margin-right: 12px;
-							display: block;
-							background: url('../../img/wrong.png') center / cover no-repeat;
-	  					}
-	  				}
-	  			}
-	  		}
-		}
-
-		& .auth_submit-button {
+		& .reg-button {
   			width: 100%;
   			height: 56px;
   			font-size: 14px;
@@ -373,10 +343,22 @@ input[type=number] {
   			border: 2px solid #8D8D8D;
 			border-radius: 4px;
 			cursor: pointer;
-			margin-bottom: 50px;
+			margin-bottom: 15px;
   		}
 
-  		& .reg {
+  		& .reg_description {
+  			font-size: 10px;
+  			color: #8D8D8D;
+  			margin-bottom: 50px;
+  			text-align: center;
+
+  			& a {
+  				color: #8D8D8D;
+  				text-decoration: underline;
+  			}
+  		}
+
+  		& .auth {
   			display: flex;
   			justify-content: center;
 
@@ -387,7 +369,7 @@ input[type=number] {
 	  			}
   			}
   		}
-	}
+  	}
 }
 
 
