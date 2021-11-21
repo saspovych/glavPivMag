@@ -41,18 +41,6 @@ minus.forEach(item => {
   })
 })
 
-
-// TODO: Когда будет реализован переход в корзину
-//  этот кусок кода нужно удалить
-addInBacket.forEach(item => {
-  item.addEventListener('click', event => {
-    let cardInner = item.closest('.card__inner')
-    cardInner.classList.add('no-flip')
-  })
-})
-
-
-
 card.forEach(item => {
   item.addEventListener('click', event => {
       if(item.classList.contains('no-flip')) {
@@ -62,9 +50,6 @@ card.forEach(item => {
       }
   })
 })
-
-
-
 
 
 const filterPriceSlider = document.getElementById('filter-slider');
@@ -103,7 +88,7 @@ inputs.forEach((el, index) => {
 
 const catalogHiddenBlock = document.querySelectorAll('section')
 catalogHiddenBlock.forEach(item => {
-  item.addEventListener('click', () => {
+  item.firstElementChild.addEventListener('click', () => {
     if(item.firstElementChild.nextElementSibling.classList.contains('catalog_unactive-block')) {
       item.firstElementChild.nextElementSibling.classList.add('catalog_active-block')
       item.firstElementChild.nextElementSibling.classList.remove('catalog_unactive-block')
